@@ -1,9 +1,15 @@
 {% extends 'base.html' %}
 
-{% block title %}
-    <title>snack detail</title>
-{% endblock title %}
 
 {% block content %}
-    <h1>This is my snack detail</h1>
+<nav>
+    <a href="{% url 'snack_list' %}">Home</a>
+    <a href="{% url 'admin:index' %}">Admin</a>
+</nav>
+<section>
+   <h2>{{ snacks.name }}</h2>
+   <h2>Purchaser: {{ snacks.purchaser }} </h2>
+   <h2>Description: {{ snacks.description }} </h2>
+</section>
+
 {% endblock content %}    
